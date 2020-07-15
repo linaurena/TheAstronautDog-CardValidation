@@ -739,7 +739,7 @@ main .choose .clue p{
 /*----------------------------------------------*/
 
 section #choose-console{
-  visibility: hidden;
+  visibility: hidd
 }
 
 section #choose-console.active{

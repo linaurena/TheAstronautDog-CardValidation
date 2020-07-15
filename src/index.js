@@ -81,8 +81,8 @@ btnAwesomeReward.addEventListener("click", function(){
 const openCartMain = document.getElementById("cart"),
 cartMainOverlay = document.getElementById("cart-main-overlay"),
 cartMainPopup = document.getElementById("cart-main-popup"),
-btnCloseCart = document.getElementById("btn-close-popup-cart"),
-btnPay = document.getElementById("pay-main");
+btnCloseCart = document.getElementById("btn-close-popup-cart");
+/*btnPay = document.getElementById("pay-main");*/
 
 openCartMain.addEventListener("click", function(){
   cartMainOverlay.classList.add("active");

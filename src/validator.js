@@ -40,6 +40,7 @@ function capturarNumero() {
       if (pos % 2 == 0) {
         //par
         sumarpar += parseInt(par);
+        /*sumarpar = sumarpar + parseInt(par);´*/
       }
     });
 

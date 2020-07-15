@@ -106,10 +106,10 @@ Reflexiona y luego marca los objetivos que has llegado a **entender** y
 
 ### Javascript
 
-* [ ] Manipulación de strings
+* [ x ] Manipulación de strings
 * [ x ] Uso de condicionales
 * [ ] Uso de bucles
-* [ x ] Uso de funciones
+* [ ] Uso de funciones
 * [ ] Datos atómicos y estructurados
 * [ ] Utilizar ES Modules (`import` | `export`).
 
@@ -119,13 +119,13 @@ Reflexiona y luego marca los objetivos que has llegado a **entender** y
 
 ### Git y GitHub
 
-* [ x ] Comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+* [ ] Comandos de git (`add` | `commit` | `pull` | `status` | `push`).
 * [ ] Manejo de repositorios de GitHub (`clone` | `fork` | `gh-pages`).
 
 ### Buenas prácticas de desarrollo
 
 * [ ] Organizar y dividir el código en módulos (Modularización).
-* [ x ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
+* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
 * [ ] Uso de linter para seguir buenas prácticas (ESLINT).
 
 
