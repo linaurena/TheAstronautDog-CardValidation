@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--Se establece la medida única del sitio, no es posible hacer zoom-->
+  <meta name="viewport"content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="author" content="Mayerly Bernal y Lina Ureña">
+  <!--Posicionamiento web-->
+  <meta name="keywords" content="tienda virtual, consoles, accesories, card validation, pago con tarjeta">
+  <!--Enlace a CSS-->
+  <link rel="stylesheet" href="style.css">
+  <!--Fuente global del sitio-->
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <!--ícono del sitio en la pestaña-->
+  <link rel="icon" type="image/png" href="img/icon.png" />
+  <!--Fuente para íconos del sitio-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <!--Nombre de la pestaña-->
+  <title>Tienda Virtual</title>
+</head>
+
+<body class="main-g-c">
+  <!--Encabezado del sitio-->
+  <header class="header-contain">
+    <nav class="nav-options">
+      <ul class="g-c-ul">
+        <li><a href="index.html">GO TO MENU</a></li>
+        <li><a href="consoles.html" id="go-console-cat">CONSOLES</a></li>
+      </ul>
+    </nav>
+    <div class="version-g-c">
+      <p>v.  1.0</p>
+    </div>
+        <nav class="responsive-nav">
+          <ul class="responsive-ul">
+            <li><a href="index.html"><i class="fas fa-list-ul"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-user-astronaut"></i> Categories</a></li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i> My cart</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="cart">
+      <a href="#cart" id="cart"><img src="img/cart.svg" alt="Cart icon"></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="choose" id="choose-game">
+      <h1>Games</h1>
+      <div class="options-choose">
+        <div class="li-opt">
+          <h2><a href="#crash-section" id="crash-li">CRASH</a></h2>
+          <h2><a href="#call-of-duty-section" id="call-li">CALL OF DUTY</a></h2>
+          <h2><a href="#legend-of-zelda-section" id="legend-li">LEGEND OF ZELDA</a></h2>
+        </div>
+      </div>
+      <div class="clue">
+        <div class="box-clue">
+          <img src="img/icon.png" alt="icon">
+          <p>Select the option you prefer</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="s-game" id="crash-section">
+      <div class="info-section">
+        <div class="others">
+          <a href="#call-of-duty-section" class="open-call-of-duty">CALL OF DUTY</a>
+          <a href="#legend-of-zelda-section" class="open-legend-of-zelda">LEGEND OF ZELDA</a>
+        </div>
+        <div class="s-name">
+          <h2>CRASH</h2>
+          <div class="price">
+            <p>$800 USD</p>
+          </div>
+          <div class="description">
+            <p>Crash game</p>
+            <p class="green">Get free today</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-section">
+        <div class="img-product">
+          <img class="case" src="img/crashgame.png" alt="Crash Game">
+          <button class="btn-open-form" id="btn-crash">Add to cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="s-game" id="call-of-duty-section">
+      <div class="info-section">
+        <div class="others">
+          <a href="#crash-section" class="open-crash">CRASH</a>
+          <a href="#legend-of-zelda-section" class="open-legend-of-zelda">LEGEND OF ZELDA</a>
+        </div>
+        <div class="s-name">
+          <h2>CALL OF DUTY</h2>
+          <div class="price">
+            <p>$800 USD</p>
+          </div>
+          <div class="description">
+            <p>Call of duty game</p>
+            <p class="green">Get free today</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-section">
+        <div class="img-product">
+          <img class="case" src="img/callofdutygame.png" alt="Call of duty game">
+          <button class="btn-open-form" id="btn-call">Add to cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="s-game" id="legend-of-zelda-section">
+      <div class="info-section">
+        <div class="others">
+          <a href="#crash-section" class="open-crash">CRASH</a>
+          <a href="#call-of-duty-section" class="open-call-of-duty">CALL OF DUTY</a>
+        </div>
+        <div class="s-name">
+          <h2>LEGEND OF ZELDA</h2>
+          <div class="price">
+            <p>$800 USD</p>
+          </div>
+          <div class="description">
+            <p>Legend of Zelda game</p>
+            <p class="green">Get free today</p>
+          </div>
+        </div>
+      </div>
+      <div class="product-section">
+        <div class="img-product">
+          <img class="case" src="img/legendofzelda.png" alt="Call of duty game">
+          <button class="btn-open-form" id="btn-legend">Add to cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <aside>
+    <!--Fondo de popup-->
+    <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <a href="#" id="btn-close-form" class="btn-close-form"><i class="fas fa-times"></i></a>
+        <form>
+          <div class="contain-inputs">
+            <h3>MAKE YOUR ORDER NOW</h3>
+            <!--Se solicita el nombre completo del usuario-->
+            <p>
+              <label for="name">Nombre completo:</label>
+              <input type="text" name="user-name" id="name" placeholder="Escribe tu nombre" required />
+            </p>
+            <!--Se pregunta país para conocer el Código Telefónico Internacional-->
+            <p>País:</p>
+            <p>
+              <select>
+                <option>Colombia (+57)</option>
+                <option>Chile (+56)</option>
+                <option>Brasil (+55)</option>
+                <option>México (+52)</option>
+                <option>Perú (+51)</option>
+              </select>
+            </p>
+            <!--Se solicita al usuario su número de teléfono-->
+            <p>
+              <label for="tel">Celular:</label>
+              <input type="tel" name="tel" id="tel" required>
+            </p>
+            <!--Se solicita al usuario su número correo electrónico-->
+            <p>
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required>
+            </p>
+            <!--Se pregunta medio de pago-->
+            <p>Payment method:</p>
+            <p>
+              <select>
+                <option id="btn-not-credit-card">Cash</option>
+                <option id="btn-credit-card">Credit card</option>
+              </select>
+            </p>
+          </div>
+          <div id="contain-inputs-credit-card">
+            <h3>CARD VALIDATION</h3>
+
+            <!--Imagen tarjeta -->
+
+            <!--Se solicita al usuario indicar el tipo de tarjeta-->
+            <p>
+              <select>
+                <option>Visa</option>
+                <option>Master Card</option>
+              </select>
+            </p>
+            <!--Se solicita al usuario digitar el númeo de tarjeta-->
+            <p>
+              <label for="number">Credit Card number</label>
+              <input type="texto" id="number" name="cardnumber" required />
+            </p>
+            <!--Fecha de caducidad de la tarjeta-->
+            <p>
+              <label for="date">Caducity</label>
+              <input type="date" id="date" name="expiration" required />
+            </p>
+          </div>
+          <div class="btn-inputs">
+            <!--Generar factura de compra-->
+            <p>
+              <button class="order" id="order">Order it</button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <footer>
+    <div class="footer">
+      <p>COPYRIGHT © 2020 | MAYERLY BERNAL & LINA UREÑA</p>
+    </div>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>

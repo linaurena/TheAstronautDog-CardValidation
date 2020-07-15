@@ -1,0 +1,1207 @@
+/*Para CSS los selectores son: *= global, p=etiqueta, #nombre= id .p= clase */
+
+/*----------------*/
+/*ESTILOS GLOBALES*/
+/*----------------*/
+
+/*Tener en cuenta para próximos proyectos: npm install normalize.css*/
+
+* {
+  font-family: 'Julius Sans One', sans-serif, "Century Gothic";
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*permite mantener margin cambiando el tamaño interior*/
+}
+
+/*----------------*/
+/*CUERPO DE PÁGINA*/
+/*----------------*/
+
+.home{
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar{
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #C4C4C4;
+}
+/*--------------------*/
+/*ENCABEZADO DE PÁGINA*/
+/*--------------------*/
+
+.header-contain-prin{
+  position: absolute;
+  left: 6.25rem;
+  width: 15.5rem;
+  height: 53.125rem;
+  background-color:rgba(55, 49, 45, 0.8);
+  display: block; /*Sube nav al nivel del logo*/
+  text-align: center;
+  border-radius: 3px;
+}
+
+/*----*/
+/*LOGO*/
+/*----*/
+
+.logo-prin #logo{
+  height: 9.6875rem;
+  margin-top: 4.25rem;
+  margin-bottom: 14.5625rem;
+  padding-bottom: 0em;
+}
+
+/*----------------------------------*/
+/*BARRA DE NAVEGACIÖN DEL ENCABEZADO*/
+/*----------------------------------*/
+
+.desktop-nav-prin{
+  text-align: center;
+  padding: 2.125rem;
+}
+
+.desktop-nav-prin ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* list-style-type elimina la viñeta de las listas*/
+  list-style-type: none;
+  height: 9.375rem;
+}
+
+.desktop-nav-prin li {
+  width: 180px;
+  height: 38px;
+  background: rgba(196, 196, 196, 0.1);
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.desktop-nav-prin li a{
+  /* text-decoration elimina la línea inferior de los enlaces*/
+  text-decoration: none;
+  color: whitesmoke;
+  transition: all .3s ease;
+}
+
+.desktop-nav-prin li a:hover{
+  color: greenyellow;
+}
+
+/*------------------------------*/
+/*BARRA DE NAVEGACIÓN RESPONSIVE*/
+/*------------------------------*/
+
+.responsive-nav-prin{
+  display: none;
+}
+
+/*----*/
+/*CART*/
+/*----*/
+
+.cart{
+  position: absolute;
+  height: 3.875rem;
+  width: 8.4375rem;
+  right: 0;
+  top: 0;
+  background: rgba(55, 49, 45, 0.8);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 0px 67.5px;
+}
+.cart img{
+  position: absolute;
+  width: 2.125rem;
+  top: 0.875rem;
+  right: 2.4375rem;
+}
+
+
+/*-------------------------------------------------*/
+/*DESCRIPCIÓN DEL SITIO - BIENVENIDA - BARRA DE NAV*/
+/*-------------------------------------------------*/
+
+.guide{
+  padding: 2.125rem;
+  padding-top: 0.375rem;
+  padding-bottom: 1.25rem;
+  height: 11.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guide .description p{
+  text-align: left;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Century Gothic";
+}
+
+.guide .question p{
+  text-align: left;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Century Gothic";
+}
+
+.guide .version p{
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Century Gothic";
+}
+
+/*------------*/
+/*OVERLAY CART*/
+/*------------*/
+
+.cart-overlay{
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.cart-overlay.active{
+  visibility: visible;
+}
+
+.popup-cart{
+  position: fixed;
+  background-color: #403E3D;;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  right: 0;
+  height: 100%;
+  width: 24.0625rem;
+  border-radius: 3px;
+
+}
+
+.popup-cart .btn-close-popup-cart{
+  padding: 0.75rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: .3s ease all;
+}
+
+.sup-cart{
+  height: 26.3125rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sup-cart .your-cart{
+  font-size: 3.3125rem;
+  padding-top: 4.875rem;
+  padding-left: 3.5625rem;
+  color: rgba(255, 255, 255, 0.8);
+  width: 10.1875rem;
+}
+
+.sup-cart img{
+  height: 100%;
+  width: 10rem;
+  right: 0;
+}
+/*BOX TO ORDER*/
+
+.to-order-list{
+  height: 25.625rem;
+  padding-top: 1.25rem;
+}
+
+.to-order-list .product{
+  width: 17.3125rem;
+  height: 4rem;
+  background-color: rgba(196, 196, 196, 0.8);
+  padding-top: 0.625rem;
+  padding-left: 1rem;
+  margin-bottom: 2.75rem;
+  margin-left: 3.375rem;
+}
+
+.to-order-list p{
+  font-family: "Century Gothic";
+  line-height: 17px;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pay-div{
+  height: 17.3125rem;
+}
+
+.pay-div button{
+  background-color: rgba(196, 196, 196, 0.1);
+  border: none;
+  width: 10.625rem;
+  height: 2.9375rem;
+  font-size: 1.125rem;
+  margin-left: 6.75rem;
+  margin-top: 2.1875rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+
+/*----------------*/
+/*OVERLAY ABOUT US*/
+/*----------------*/
+
+.overlay-about-us{
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay-about-us.active{
+  visibility: visible;
+}
+
+
+.popup-about-us{
+  background: whitesmoke;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  height: 48.375rem;
+  width: 41.3125rem;
+  border-radius: 3px;
+}
+
+.popup-about-us .btn-close-popup-about{
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: .3s ease all;
+}
+
+.popup-about-us .btn-close-popup-about:hover{
+  color: black;
+}
+
+.popup-about-us .about-us{
+  background-image: url(img/aboutus.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.25rem;
+  height: 42.875rem;
+}
+
+.popup-about-us .about-us h3{
+  font-size: 3.3125rem;
+  padding-top: 3rem;
+  padding-left: 2.3125rem;
+}
+
+.popup-about-us .about-us p{
+  width: 25rem;
+  font-family: "Century Gothic";
+  font-size: 0.875rem;
+  padding-top: 1rem;
+  padding-left: 2.3125rem;
+  color:rgba(0, 0, 0, 0.4);
+}
+
+.popup-about-us .div-button-popup{
+  background-color:#403E3D;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-about-us .div-button-popup #lets-play-btn{
+  background-color: rgba(196, 196, 196, 0.1);
+  height: 2.9375rem;
+  width: 10.5625rem;
+  border: none;
+  color:  rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.popup-about-us .div-button-popup #lets-play-btn:hover{
+  background-color: gray;
+}
+
+/*---------------*/
+/*OVERLAY CONTACT*/
+/*---------------*/
+
+.overlay-contact{
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay-contact.active{
+  visibility: visible;
+}
+
+
+.popup-contact{
+  background: whitesmoke;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  height: 48.375rem;
+  width: 41.3125rem;
+  border-radius: 3px;
+}
+
+.popup-contact .btn-close-popup-contact{
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: .3s ease all;
+}
+
+.popup-contact .btn-close-popup-contact:hover{
+  color: black;
+}
+
+.popup-contact .contact{
+  background-image: url(img/contact-01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1.25rem;
+  height: 42.875rem;
+}
+
+.popup-contact .contact h3{
+  font-size: 3.3125rem;
+  padding-top: 3rem;
+  padding-left: 2.3125rem;
+}
+
+.popup-contact .contact .container-blurb{
+  margin-left: 2.3125rem;
+  margin-top: 9.8125rem;
+  height: 16.625rem;
+  width: 13.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.popup-contact .contact .container-blurb .blurb{
+  background-color: rgba(196, 196, 196, 0.8);
+  height: 4rem;
+  width: 13.875rem;
+  padding: 1rem;
+}
+.popup-contact .contact .container-blurb .blurb h4{
+  font-family: "Century Gothic";
+  line-height: 17px;
+}
+
+.popup-contact .contact .container-blurb .blurb p{
+  font-family: "Century Gothic";
+  line-height: 17px;
+}
+
+.popup-contact .div-button-popup-contact{
+  background-color:#403E3D;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-contact .div-button-popup-contact #ok-contact{
+  background-color: rgba(196, 196, 196, 0.1);
+  height: 2.9375rem;
+  width: 10.5625rem;
+  border: none;
+  color:  rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.popup-contact .div-button-popup-contact #ok-contact:hover{
+  background-color: gray;
+}
+
+/*---------------*/
+/*OVERLAY REWARD*/
+/*---------------*/
+
+
+.overlay-reward{
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay-reward.active{
+  visibility: visible;
+}
+
+
+.popup-reward{
+  background: whitesmoke;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  height: 48.375rem;
+  width: 41.3125rem;
+  border-radius: 3px;
+}
+
+.popup-reward .btn-close-popup-reward{
+  font-size: 1rem;
+  line-height: 1rem;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: .3s ease all;
+}
+
+.popup-reward .btn-close-popup-reward:hover{
+  color: black;
+}
+
+.popup-reward .reward{
+  background-image: url(img/reward.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0.625rem;
+  height: 42.875rem;
+}
+
+.popup-reward .div-button-reward{
+  background-color:#403E3D;
+  height: 7.0625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-reward .div-button-reward p{
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Century Gothic";
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.popup-reward .div-button-reward #awesome-btn{
+  background-color: rgba(196, 196, 196, 0.1);
+  height: 2.9375rem;
+  width: 10.5625rem;
+  border: none;
+  color:  rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+
+.popup-reward .div-button-reward #awesome-btn:hover{
+  background-color: gray;
+}
+
+/*-------------------------*/
+/*CONTENIDO PRINCIPAL INDEX*/
+/*-------------------------*/
+
+main .principal{
+  background: url(img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+section .consoles{
+  margin: 0;
+}
+
+.principal{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.consoles img{
+  vertical-align: top;
+  width: 100%;
+  min-width: 180px;
+}
+.dog img{
+  vertical-align: top;
+  width: 100%;
+  min-width: 60px;
+  margin: auto;
+}
+
+.games img{
+  vertical-align: top;
+  width: 100%;
+  min-width: 70px;
+}
+
+/*-----------------------*/
+/*PIE DE PÁGINA PRINCIPAL*/
+/*-----------------------*/
+
+.footer-prin{
+  background-color: #403E3D;
+  padding: 1rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 14px;
+}
+
+/*-----------------------------------*/
+/*BACKGROUND PÁGINA CONSOLAS Y JUEGOS*/
+/*-----------------------------------*/
+
+.main-g-c{
+  height: 56.25rem;
+  background-image: url(img/wall.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*--------------------------------------*/
+/*ENCABEZADO DE PÁGINA CONSOLAS Y JUEGOS*/
+/*--------------------------------------*/
+
+.main-g-c .header-contain{
+  position: absolute;
+  left: 2.5rem;
+  width: 15.5rem;
+  height: 17.1875rem;
+  background-color:rgba(55, 49, 45, 0.8);
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.main-g-c .header-contain .nav-options{
+  height: 14.375rem;
+  padding-top: 5.9375rem;
+}
+
+.main-g-c .header-contain .nav-options ul{
+  height: 5.875rem;
+  width: 11.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.main-g-c .header-contain .nav-options li{
+  list-style-type: none;
+  background-color: rgba(196, 196, 196, 0.1);
+  height: 2.375rem;
+  width: 11.25rem;
+  padding: 0.625rem;
+}
+
+.main-g-c .header-contain .nav-options li a{
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.main-g-c .header-contain .nav-options li a:hover{
+  color: greenyellow;
+}
+
+
+.main-g-c .header-contain .version-g-c{
+  height: 2.75rem;
+}
+
+.main-g-c .header-contain .version-g-c p{
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding-top: 1rem;
+}
+
+.responsive-ul{
+  display: none;
+}
+
+/*--------------------------*/
+/*MAIN DE CONSOLES AND GAMES*/
+/*--------------------------*/
+
+main .choose{
+  height: 56.25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+main .choose h1{
+  display: none;
+}
+
+main .choose .options-choose{
+  padding-left: 4.6875rem;
+  padding-top: 29.25rem;
+}
+
+main .choose .options-choose .li-opt{
+  height: 15.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .choose .options-choose h2{
+  font-size: 3.3125rem;
+  line-height: 4.0625rem;
+}
+
+main .choose .options-choose h2 a{
+  text-decoration: none;
+  font-family: "Century Gothic";
+  color:#000000;
+}
+
+main .choose .clue{
+  padding-top: 8rem;
+}
+
+main .choose .clue .box-clue{
+  position: absolute;
+  right: 0;
+  background: rgba(183, 143, 117, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 111px 0px 0px 111px;
+  width: 40.9375rem;
+  height: 39.125rem;
+}
+
+
+main .choose .clue img{
+  position: absolute;
+  right: -7rem;
+  top: -2.5rem;
+  width: 26.0425rem;
+  transform: rotate(-45deg);
+}
+
+main .choose .clue p{
+  position: absolute;
+  padding-top: 27.375rem;
+  padding-left: 5rem;
+  width: 30rem;
+  font-family: "Century Gothic";
+  font-size: 2.75rem;
+  line-height: 54px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*----------------------------------------------*/
+/*SECCIONES GAMES Y CONSOLES - ESTILOS GENERALES*/
+/*----------------------------------------------*/
+
+section #choose-console{
+  visibility: hidden;
+}
+
+section #choose-console.active{
+  visibility: visible;
+}
+
+section #choose-game{
+  visibility: hidden;
+}
+
+section #choose-game.active{
+  visibility: visible;
+}
+
+main .s-game{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+main .s-game{
+  visibility: visible;
+}
+
+/*---------------------------------------------------*/
+/*SECCIONES GAMES Y CONSOLES - ESTILO HIDDEN Y ACTIVE*/
+/*---------------------------------------------------*/
+
+/*CRASH*/
+
+section #crash-section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+section #crash-section.active{
+  visibility: visible;
+}
+
+/*CALL OF DUTY*/
+
+section #call-of-duty-section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+section #call-of-duty-section:active{
+  visibility: visible;
+}
+
+/*LEGEND OF ZELDA*/
+
+section #legend-of-zelda-section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+section #legend-of-zelda-section:active{
+  visibility: visible;
+}
+
+/*XBOX*/
+
+section #xbox-section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+section #xbox-section.active{
+  visibility: visible;
+}
+
+/*PLAY STATION*/
+
+section #play-station-section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+section #play-station-section:active{
+  visibility: visible;
+}
+
+/*NINTENDO SWITCH*/
+
+section #nintendo-switch-section{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+section #play-station-section:active{
+  visibility: visible;
+}
+
+/*----------------------------*/
+/*COLUMNA IZQUIERDA DE SECCIÓN*/
+/*----------------------------*/
+
+main .s-game .info-section{
+  display: flex;
+  height: 56.25rem;
+  flex-direction: column;
+  padding-left: 4.6875rem;
+}
+
+main .s-game .info-section .others{
+  height: 5.25rem;
+  margin-top: 21.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .s-game .info-section .others a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Century Gothic";
+  font-size: 1.5rem;
+}
+
+main .s-game .info-section .s-name{
+  margin-top: 2.65rem;
+
+}
+
+main .s-game .info-section .s-name h2{
+  font-family: "Century Gothic";
+  height: 8.5rem;
+  font-size: 3.3125rem;
+  line-height: 4.0625rem;
+}
+
+main .s-game .info-section .s-name .price{
+  font-family: "Century Gothic";
+  font-size: 2.375rem;
+  margin-bottom: 2.625rem;
+
+}
+
+main .s-game .info-section .s-name .description{
+  height: 5.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main .s-game .info-section .s-name .description p{
+  font-family: "Century Gothic";
+  font-size: 1.125rem;
+}
+
+main .s-game .info-section .s-name .description .green{
+  color: #285828;
+}
+
+/*--------------------------*/
+/*COLUMNA DERECHA DE SECCIÓN*/
+/*--------------------------*/
+
+main .s-game .product-section{
+  display: flex;
+  flex-direction: column;
+  height: 56.25rem;
+  width: 66.25rem;
+}
+
+main .s-game .product-section .img-product{
+  margin: auto;
+  height: 39.8125rem;
+  width: 49.625rem;
+}
+
+main .s-game .product-section .img-product img{
+  height: 39.8125rem;
+  width: 49.625rem;
+}
+
+main .s-game .product-section .img-product button{
+  position: absolute;
+  top: 47.25rem;
+  right: 6.125rem;
+  height: 4.125rem;
+  width: 10.4375rem;
+  background: rgba(212, 175, 55, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 1.875rem;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+
+
+/*--------------------------------*/
+/*ESPECIFICACIONES IMG DE CONSOLES*/
+/*--------------------------------*/
+
+
+main .s-game .product-section-console{
+  height: 56.25rem;
+  width: 66.25rem;
+}
+
+main .s-game .product-section-console .img-product-console{
+  height: 62.25rem;
+}
+
+/*XBOX*/
+
+main .s-game .product-section-console #box-xbox{
+  position: absolute;
+  margin-top: 14.4375rem;
+  height: 41.3125rem;
+  width: 59rem;
+  visibility: hidde
+}
+
+
+main .s-game .product-section-console #box-xbox #xbox-controller{
+  height: 41.3125rem;
+  width: 59rem;
+  visibility: h
+}
+
+/*PLAY STATION*/
+
+main .s-game .product-section-console #box-play{
+  position: absolute;
+  margin-top: 14.875rem;
+  height: 40.5rem;
+  width: 61.375rem;
+  visibility: hidd
+}
+
+
+main .s-game .product-section-console #box-play #play-station-controller{
+  height: 40.5rem;
+  width: 61.375rem;
+}
+
+/*NINTENDO SWITCH*/
+
+main .s-game .product-section-console #box-nintendo{
+  position: absolute;
+  margin-top: 11.875rem;
+  height: 43.0625rem;
+  width: 58.875rem;
+  visibility: hidd
+}
+
+
+main .s-game .product-section-console #box-nintendo #nintendo-switch-controller{
+  height: 43.0625rem;
+  width: 58.875rem;
+}
+
+
+
+
+
+
+
+
+
+
+main .s-game .product-section-console .img-product-console button{
+  position: absolute;
+  top: 47.25rem;
+  right: 6.125rem;
+  height: 4.125rem;
+  width: 10.4375rem;
+  background: rgba(212, 175, 55, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 1.875rem;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1.125rem;
+}
+
+/*------------------------------*/
+/*PIE DE PÁGINA CONSOLES Y GAMES*/
+/*------------------------------*/
+
+.footer{
+  background-color: #403E3D;
+  padding: 1rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 14px;
+  bottom: 0em;
+}
+
+
+
+/*--------------------*/
+/*FORMULARIO DE COMPRA*/
+/*--------------------*/
+
+.overlay{
+  background: rgba(0,0,0,.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay.active{
+  visibility: visible;
+}
+
+.popup{
+  background: #f8f8f8;
+  box-shadow: 0px, 0px, 5px, 0px rgba(0,0,0,.3);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  width: 600px;
+  transition: .3s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+  visibility: hid
+}
+
+.popup.popup.active{
+  visibility: visible;
+}
+.popup .btn-close-form{
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  color: #bbbbbb;
+  transition: .3s, ease all;
+}
+
+.popup .btn-close-form:hover{
+  color: #000;
+}
+
+.popup h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 0em;
+  /*opacity: 0;*/
+}
+
+.popup h3{
+  font-size: 25px;
+  margin-bottom: 10px;
+  /*opacity: 0;*/
+}
+
+.popup form .contain-inputs input{
+  width: 99%;
+  margin-bottom: 0px;
+  height: 28px;
+  line-height: 52px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #bbbbbb;
+}
+
+.popup form .contain-inputs select{
+  width: 100%;
+  margin-bottom: 0px;
+  height: 28px;
+  line-height: 52px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #bbbbbb;
+}
+
+.popup form .contain-inputs-credit-card input{
+  width: 99%;
+  margin-bottom: 0px;
+  height: 28px;
+  line-height: 52px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #bbbbbb;
+}
+
+.popup form .contain-inputs-credit-card select{
+  width: 99%;
+  margin-bottom: 0px;
+  height: 28px;
+  line-height: 52px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #bbbbbb;
+}
+
+.popup form .contain-inputs-credit-card.active{
+  visibility: visible;
+}
+
+.popup form .order{
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  border: none;
+  color: white ;
+  border-radius: 3px;
+  background: salmon;
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.popup form .order:hover{
+  background: rgb(252, 93, 76);
+}
+
+.popup.active{
+  opacity: 1;
+  transform: scale(1);
+}

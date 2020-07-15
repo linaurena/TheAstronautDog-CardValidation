@@ -1,14 +1,211 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Se establece la medida única del sitio, no es posible hacer zoom-->
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum- scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="Mayerly Bernal y Lina Ureña">
+    <!--Posicionamiento web-->
+    <meta name="keywords" content="tienda virtual, consoles, accesories, card validation, pago con tarjeta">
+    <!--Fuente global del sitio-->
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <!--ícono del sitio en la pestaña-->
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <!--Fuente para íconos del sitio-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <!--Enlace a CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--Nombre de la pestaña-->
+    <title>The Astronaut Dog E-commerce</title>
+</head>
+
+<body class="home">
+    <!--Encabezado del sitio-->
+    <header>
+        <div class="header-contain-prin">
+            <div class="logo-prin">
+                <img src="img/logo.png" alt="Logo tienda virtual" id="logo">
+            </div>
+            <div class="navigator-prin">
+                <!--Barra de navegación del sitio-->
+                <nav class="desktop-nav-prin">
+                    <ul class="desktop-ul">
+                        <li><a href="#" id="btn">categories</a></li>
+                        <li><a href="#about-us" id="li-about-us">about us</a></li>
+                        <li><a href="#contact" id="li-contact">contact</a></li>
+                    </ul>
+                </nav>
+                <div class="guide">
+                    <div class="description">
+                        <p>We have the best for gamers out of this world.</p>
+                    </div>
+                    <div class="question">
+                        <p>What are you looking for?</p>
+                    </div>
+                    <div class="version">
+                        <p>V. 1.0</p>
+                </div>
+            </div>
+                <nav class="responsive-nav-prin">
+                    <ul class="responsive-ul">
+                        <li><a href="#reward"><i class="fas fa-list-ul"></i>Categories</a></li>
+                        <li><a href="#about-us"><i class="fas fa-user-astronaut"></i>About us</a></li>
+                        <li><a href="#contact"><i class="fas fa-mobile-alt"></i>Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="cart">
+          <a href="#cart"><img src="img/cart.svg" alt="Cart icon" id="cart"></a>
+        </div>
+    </header>
+    <main>
+
+        <!--¿Qué estás buscando?-->
+
+        <section>
+            <div class="principal">
+                <!--Espacio de consolas, al dar clic a la imagen envía al usuario a la página de consolas-->
+                <div class="consoles">
+                    <h2>Consoles</h2>
+                    <a href="consoles.html" id="go-console-img"><img src="img/consoles.png" alt="Imagen consola" width="500px"></a>
+                </div>
+                <div class="dog">
+                    <a href="#"><img src="img/theastronautdog.png" alt="Imagen control"id="dog-reward"></a>
+                </div>
+                <div class="games">
+                    <!--Espacio de juegos, al dar clic a la imagen envía al usuario a la página de juegos-->
+                    <h2>Games</h2>
+                    <a href="games.html"><img src="img/games.png" alt="Imagen control"></a>
+                </div>
+        </section>
+        <section class="overlay-about-us" id="overlay-about-us">
+            <div class="popup-about-us" id="popup-about-us">
+                <div class="about-us">
+                    <a href="#" class="btn-close-popup-about" id="btn-close-popup-about"><i class="fas fa-times"></i></a>
+                    <h3>ABOUT US</h3>
+                    <p>There are people who say that real shopping is not so much fun, and... It's true, that's why we want
+                        your shopping experience will be incredible</p>
+                </div>
+                <div class="div-button-popup">
+                    <input type="button" value="LET'S PLAY" id="lets-play-btn">
+                </div>
+            </div>
+        </section>
+        <section class="overlay-contact" id="overlay-contact">
+            <div class="popup-contact">
+                <div class="contact">
+                    <a href="#" class="btn-close-popup-contact" id="btn-close-popup-contact"><i class="fas fa-times"></i></a>
+                    <h3>CONTACT</h3>
+                    <div class="container-blurb">
+                        <div class="blurb">
+                            <h4>E-mail</h3>
+                            <p>astronaut@dog.com</p>
+                        </div>
+                        <div class="blurb">
+                            <h4>WhatsApp</h3>
+                            <p>+57 888 888 8888</p>
+                        </div>
+                        <div class="blurb">
+                            <h4>Instagram</h3>
+                            <p>@theastronautdog</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-button-popup-contact">
+                    <input type="button" value="OK!" id="ok-contact">
+                </div>
+            </div>
+        </section>
+        <section class="overlay-reward" id="overlay-reward">
+            <div class="popup-reward" id="popup-reward">
+                <div class="reward">
+                    <a href="#" class="btn-close-popup-reward" id="btn-close-popup-reward"><i class="fas fa-times"></i></a>
+                </div>
+                <div class="div-button-reward">
+                    <p>Enter the code when making the purchase to receive the astronaut dog as a gift</p>
+                    <input type="button" value="AWESOME" id="awesome-btn">
+                </div>
+            </div>
+        </section>
+        <section class="cart-overlay" id="cart-main-overlay">
+          <div class="popup-cart" id="cart-main-popup">
+            <div class="cart-div">
+              <a href="#" class="btn-close-popup-cart" id="btn-close-popup-cart"><i class="fas fa-times"></i></a>
+              <div class="sup-cart">
+                <h3 class="your-cart">YOUR CART</h3>
+                <img src="img/part-cart.svg" alt="Cart design">
+              </div>
+              <div class="to-order-list">
+                <div class="product">
+                  <p>Producto 1</p>
+                  <p>Descripción del producto</p>
+                </div>
+                <div class="product">
+                  <p>Producto 2</p>
+                  <p>Descripción del producto</p>
+                </div>
+                <div class="product">
+                  <p>Producto 3</p>
+                  <p>Descripción del producto</p>
+                </div>
+              <div class="pay-div">
+                <button id="pay-main">PAY</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <aside>
+          <!--Fondo de popup-->
+          <div class="overLay active" id="overLay">
+            <div class="popup" id="popup">
+                <a href="#" id="btnCerrarPopup" class="btnCerrarPopup"><i class="fas fa-times"></i></a>
+                <h3>INGRESA TUS DATOS</h3>
+                <br>
+                <form action="" name="formulario" method="">
+                    <div class="bloqueInputs">
+                        <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombres"
+                            autocomplete="off" required>
+                        <input type="email" name="email" id="email" maxlength="30" placeholder="Correo"
+                            autocomplete="off" required>
+                    </div>
+                    <div class="radios">
+                        <input type="radio" name="sexo" id="hombre" value="Hombre" required> Hombre
+                        <input type="radio" name="sexo" id="mujer" value="Mujer" required> Mujer
+                    </div>
+
+                    <h3>DATOS DE TU TARJETA</h3>
+                    <div>
+                        <label for="tarjeta">Tipo de tarjeta</label>
+                        <select name="usercard" id="tarjeta">
+                            <option value="nada"></option>
+                            <option value="visa">Visa</option>
+                            <option value="mc">Master</option>
+                        </select>
+                        <label for="numTarjeta">Numero de Tarjeta</label>
+                        <input type="text" id="numTarjeta" maxlength="13" autocomplete="off" required>
+                        <label for="fecha">Fecha de vencimiento</label>
+                        <input type="date" id="fecha" required>
+                        <br>
+                        <br>
+                        <input type="checkbox" name="terminos" id="terminos"> Terminos y Condiciones
+                    </div>
+                    <input type="submit" id="btn" name="btn" value="Validar Pago">
+                    <small class="mensajeLuhn"></small>
+                </form>
+            </div>
+        </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-prin">
+            <p>Copyright © 2020 | Mayerly Bernal & Lina Ureña</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="validator.js"></script>
+</body>
+
 </html>
